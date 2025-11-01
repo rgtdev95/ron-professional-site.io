@@ -1,13 +1,8 @@
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Github } from "lucide-react";
+import { FaXTwitter, FaThreads } from "react-icons/fa6";
 import { Card, CardContent } from "@/components/ui/card";
 
 const contactInfo = [
-  {
-    icon: Phone,
-    title: "Call me",
-    value: "+1 (555) 123-4567",
-    href: "tel:+15551234567",
-  },
   {
     icon: Mail,
     title: "Write an email",
@@ -15,10 +10,22 @@ const contactInfo = [
     href: "mailto:your.email@example.com",
   },
   {
-    icon: MapPin,
-    title: "Visit my office",
-    value: "Your City, Your Country",
-    href: "#",
+    icon: Github,
+    title: "GitHub",
+    value: "@yourusername",
+    href: "https://github.com/yourusername",
+  },
+  {
+    icon: FaXTwitter,
+    title: "X (Twitter)",
+    value: "@yourusername",
+    href: "https://twitter.com/yourusername",
+  },
+  {
+    icon: FaThreads,
+    title: "Threads",
+    value: "@yourusername",
+    href: "https://threads.net/@yourusername",
   },
 ];
 
