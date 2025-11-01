@@ -33,6 +33,36 @@ export const BlogProvider: React.FC<{ children: React.ReactNode }> = ({ children
     const storedBlogs = localStorage.getItem(STORAGE_KEY);
     if (storedBlogs) {
       setBlogs(JSON.parse(storedBlogs));
+    } else {
+      // Add sample blogs if none exist
+      const sampleBlogs: Blog[] = [
+        {
+          id: '1',
+          title: 'Building Modern Web Apps with React',
+          description: 'A comprehensive guide to creating scalable and performant React applications using modern best practices.',
+          image: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&auto=format&fit=crop',
+          tags: ['React', 'TypeScript', 'Web Development'],
+          externalUrl: 'https://example.com/blog/modern-react',
+        },
+        {
+          id: '2',
+          title: 'Mastering TypeScript: From Basics to Advanced',
+          description: 'Deep dive into TypeScript features, type systems, and how to write type-safe code for large-scale applications.',
+          image: 'https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=800&auto=format&fit=crop',
+          tags: ['TypeScript', 'JavaScript', 'Programming'],
+          externalUrl: 'https://example.com/blog/typescript-guide',
+        },
+        {
+          id: '3',
+          title: 'CSS Grid & Flexbox: Complete Layout Guide',
+          description: 'Master modern CSS layouts with practical examples and real-world use cases for responsive design.',
+          image: 'https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?w=800&auto=format&fit=crop',
+          tags: ['CSS', 'Web Design', 'Frontend'],
+          externalUrl: 'https://example.com/blog/css-layouts',
+        },
+      ];
+      setBlogs(sampleBlogs);
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(sampleBlogs));
     }
     
     const authStatus = localStorage.getItem(AUTH_KEY);
