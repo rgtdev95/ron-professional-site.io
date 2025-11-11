@@ -2,34 +2,34 @@ import { Button } from "@/components/ui/button";
 
 const faqs = [
   {
-    question: "How can I request an invoice?",
+    question: "🔧 1. What drives you to build things?",
     answer:
-      "Once your payment is processed, you'll get an email with your invoice. You can also download invoices in your account's billing section. For custom invoices, contact support.",
+      "I'm driven by the challenge of creating order out of chaos — transforming complex problems into solutions that feel simple, useful, and meaningful. For me, building isn't just about code or structure; it's about impact and clarity.",
   },
   {
-    question: "What technologies do you use for web development?",
+    question: "🧩 2. How do you approach problem-solving?",
     answer:
-      "I specialize in modern web technologies like HTML, CSS, and JavaScript frameworks such as React and Vue. I also use Node.js, Python with Django, and PHP with Laravel, along with databases like MySQL.",
+      "I start by understanding the real issue — not just the symptoms. From there, I break complexity into smaller, logical parts until the path forward becomes clear. I enjoy the puzzle of figuring things out and making them flow seamlessly.",
   },
   {
-    question: "How long does it take to process a refund?",
+    question: "💡 3. What's your favorite part of the development process?",
     answer:
-      "I usually process refunds within 5 to 10 business days, depending on your payment provider. If you haven't seen your refund by then, feel free to reach out to me.",
+      "That moment when everything clicks — when a messy concept becomes a clean, working system. It's the blend of logic, creativity, and discovery that keeps me hooked every time.",
   },
   {
-    question: "How does the development process work?",
+    question: "⚙️ 4. What makes your work stand out?",
     answer:
-      "My process involves analyzing requirements, creating wireframes, designing, developing, testing, and deploying. I keep in touch regularly to make sure the project stays in line with your vision.",
+      "I care deeply about the details — not just how things look, but how they work and feel. My focus is on creating systems that people actually enjoy using, not just ones that function.",
   },
   {
-    question: "What payment methods do you accept?",
+    question: "🚀 5. How do you stay curious and keep learning?",
     answer:
-      "I accept bank transfers exclusively. Once your payment is completed, please confirm with me so I can begin your project.",
+      "Curiosity drives everything I do. I experiment, break things, rebuild them, and learn from every iteration. Technology evolves fast, and I love the thrill of keeping up by creating, not just consuming.",
   },
   {
-    question: "Can you work with an existing website and make improvements?",
+    question: "🤝 6. What's it like working with you?",
     answer:
-      "Absolutely! I can help you optimize, redesign, or expand your existing website, whether it's created with a CMS like WordPress or a custom framework.",
+      "I like to keep things clear, collaborative, and calm. I value honest communication, shared problem-solving, and making sure everyone feels confident about where the project is headed.",
   },
 ];
 
@@ -44,7 +44,7 @@ const FAQ = () => {
         <div className="max-w-6xl mx-auto">
           <div className="flex justify-between items-start mb-12 gap-8">
             <div className="space-y-4 max-w-2xl">
-              <h2 className="text-4xl font-bold">Frequently asked questions</h2>
+              <h2 className="text-4xl font-bold">Get to Know My Work</h2>
               <p className="text-muted-foreground text-lg">
                 I've gathered the key information to help you make the most of your experience. If you can't find what you need, feel free to reach out to me.
               </p>
