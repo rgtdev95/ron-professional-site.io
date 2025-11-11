@@ -1,31 +1,32 @@
 import { Mail, Github } from "lucide-react";
 import { FaXTwitter, FaThreads } from "react-icons/fa6";
 import { Card, CardContent } from "@/components/ui/card";
+import { FaBlog } from "react-icons/fa";
 
 const contactInfo = [
   {
     icon: Mail,
     title: "Write an email",
-    value: "your.email@example.com",
-    href: "mailto:your.email@example.com",
+    value: "rgtprofessional95@gmail.com",
+    href: "mailto:rgtprofessional95@gmail.com",
   },
   {
     icon: Github,
     title: "GitHub",
-    value: "@yourusername",
-    href: "https://github.com/yourusername",
+    value: "@rgtdev95",
+    href: "https://github.com/rgtdev95",
   },
   {
     icon: FaXTwitter,
-    title: "X (Twitter)",
-    value: "@yourusername",
-    href: "https://twitter.com/yourusername",
+    title: "X",
+    value: "@Ron912957596957",
+    href: "https://x.com/Ron912957596957",
   },
   {
-    icon: FaThreads,
-    title: "Threads",
-    value: "@yourusername",
-    href: "https://threads.net/@yourusername",
+    icon: FaBlog,
+    title: "Blog",
+    value: "My Personal Blog",
+    href: "https://ron-blog.rtg-homelabs.tech/",
   },
 ];
 

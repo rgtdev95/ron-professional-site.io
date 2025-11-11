@@ -13,16 +13,16 @@ const Hero = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <div className="space-y-2">
-              <p className="text-muted-foreground text-sm tracking-wide">Your Name</p>
+              <p className="text-muted-foreground text-sm tracking-wide">Ron T.</p>
               <h1 className="text-5xl md:text-6xl font-bold leading-tight">
                 Your go-to professional for{" "}
                 <span className="text-primary">innovative projects</span>
               </h1>
             </div>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Bringing your ideas to life with clean, efficient, and scalable solutions. 
-              Whether it's building applications, optimizing performance, or solving 
-              complex challenges.
+              I’m an engineer with a passion for creating order out of chaos. 
+              I love bringing ideas to life, crafting systems that serve people meaningfully, 
+              and diving deep into complex problems until everything clicks into place.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
               <Button

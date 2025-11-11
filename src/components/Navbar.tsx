@@ -10,7 +10,7 @@ const Navbar = () => {
     <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-xl font-bold">Your Name</div>
+          <div className="text-xl font-bold">Ron T.</div>
           
           <div className="hidden md:flex items-center gap-8">
             <button
