@@ -206,9 +206,9 @@ router.post('/password-strength', (req, res) => {
         const validation = validatePassword(password);
 
         res.json({
-            strength,
-            label,
-            isValid: validation.isValid,
+            strength_score: strength,
+            strength_label: label,
+            valid: validation.isValid,
             errors: validation.errors || []
         });
     } catch (error) {

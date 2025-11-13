@@ -25,6 +25,7 @@ export function PasswordStrengthIndicator({
   useEffect(() => {
     if (!password) {
       setStrength(null);
+      setIsLoading(false);
       onValidationChange?.(false, []);
       return;
     }
@@ -36,9 +37,14 @@ export function PasswordStrengthIndicator({
         if (result) {
           setStrength(result);
           onValidationChange?.(result.valid, result.errors);
+        } else {
+          // If no result, assume invalid
+          onValidationChange?.(false, ['Failed to validate password']);
         }
       } catch (error) {
         console.error('Password strength check failed:', error);
+        // On error, mark as invalid
+        onValidationChange?.(false, ['Failed to check password strength']);
       } finally {
         setIsLoading(false);
       }
