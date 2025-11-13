@@ -189,10 +189,68 @@ router.get('/verify', authenticateToken, (req, res) => {
     });
 });
 
+// Check password strength
+router.post('/password-strength', (req, res) => {
+    try {
+        const { password } = req.body;
+        
+        if (!password) {
+            return res.status(400).json({ 
+                error: 'Password is required',
+                code: 'MISSING_PASSWORD'
+            });
+        }
+
+        const strength = getPasswordStrength(password);
+        const label = getPasswordStrengthLabel(strength);
+        const validation = validatePassword(password);
+
+        res.json({
+            strength,
+            label,
+            isValid: validation.isValid,
+            errors: validation.errors || []
+        });
+    } catch (error) {
+        console.error('Password strength check error:', error);
+        res.status(500).json({ 
+            error: 'Failed to check password strength',
+            code: 'CHECK_FAILED'
+        });
+    }
+});
+
+// Check account lockout status
+router.post('/lockout-status', (req, res) => {
+    try {
+        const { username } = req.body;
+        
+        if (!username) {
+            return res.status(400).json({ 
+                error: 'Username is required',
+                code: 'MISSING_USERNAME'
+            });
+        }
+
+        const lockStatus = UsersModel.isAccountLocked(username);
+        
+        res.json({
+            locked: lockStatus.locked,
+            locked_until: lockStatus.locked_until,
+            failed_attempts: lockStatus.failed_attempts
+        });
+    } catch (error) {
+        console.error('Lockout status check error:', error);
+        res.status(500).json({ 
+            error: 'Failed to check lockout status',
+            code: 'CHECK_FAILED'
+        });
+    }
+});
+
 // Logout (client should remove token)
 router.post('/logout', (req, res) => {
     res.json({ message: 'Logout successful' });
 });
-
 
 export default router;
