@@ -4,7 +4,7 @@ const ProudOf = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <div className="space-y-4 mb-12">
-            <p className="text-muted-foreground text-sm tracking-widest uppercase">Proud Of</p>
+            <p className="text-muted-foreground text-sm tracking-widest uppercase"></p>
             <h2 className="text-4xl font-bold">What I'm Proud Of</h2>
           </div>
 
