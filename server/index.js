@@ -119,20 +119,21 @@ app.use((error, req, res, next) => {
 });
 
 // Start server
-app.listen(PORT, () => {
+const HOST = '0.0.0.0';
+app.listen(PORT, HOST, () => {
     console.log(`
 🚀 Portfolio Server Started Successfully!
 
 📍 Server Details:
    • Environment: ${NODE_ENV}
    • Port: ${PORT}
-   • URL: http://localhost:${PORT}
+   • URL: http://${HOST}:${PORT}
 
 🔗 API Endpoints:
-   • Health Check: http://localhost:${PORT}/api/health
-   • Projects: http://localhost:${PORT}/api/projects
-   • Contact: http://localhost:${PORT}/api/contact
-   • Settings: http://localhost:${PORT}/api/settings
+   • Health Check: http://${HOST}:${PORT}/api/health
+   • Projects: http://${HOST}:${PORT}/api/projects
+   • Contact: http://${HOST}:${PORT}/api/contact
+   • Settings: http://${HOST}:${PORT}/api/settings
 
 ${NODE_ENV === 'development' 
     ? '⚡ Development Mode: Frontend should be running on http://localhost:8080' 
