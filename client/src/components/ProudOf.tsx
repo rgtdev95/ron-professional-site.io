@@ -10,16 +10,7 @@ const ProudOf = () => {
 
           <div className="space-y-6 text-lg leading-relaxed text-foreground">
             <p>
-              I'm proud of creating order out of chaos — of taking complex, messy challenges and turning them into systems that actually make sense.
-            </p>
-            <p>
-              I'm proud of building tools and products that serve people in meaningful ways, not just because they work, but because they make someone's day a little easier.
-            </p>
-            <p>
-              I'm proud of staying curious — always learning, experimenting, and figuring things out until it clicks.
-            </p>
-            <p>
-              Most of all, I'm proud of doing work that reflects care, clarity, and purpose.
+              I’m proud of turning complex, chaotic challenges into clear, effective systems—building tools and products that genuinely help people, staying curious through constant learning, and doing work infused with care, clarity, and purpose.
             </p>
           </div>
         </div>
