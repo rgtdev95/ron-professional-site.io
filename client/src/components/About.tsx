@@ -33,10 +33,10 @@ const About = () => {
               </Button>
               <Button
                 variant="secondary"
-                onClick={() => scrollToSection("projects")}
+                onClick={() => window.open('https://ron-blog.rtg-homelabs.tech/', '_blank')}
                 className="bg-secondary text-secondary-foreground hover:bg-secondary/80"
               >
-                View projects
+                Read more...
               </Button>
             </div>
           </div>
