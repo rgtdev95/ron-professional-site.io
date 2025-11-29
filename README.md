@@ -246,48 +246,12 @@ PM2 is the industry-standard process manager for Node.js applications in product
 sudo npm install -g pm2
 ```
 
-### PM2 Configuration
-
-Create `ecosystem.config.js` in project root:
-
-```javascript
-module.exports = {
-  apps: [{
-    name: 'portfolio-api',
-    script: './server/index.js',
-    cwd: '/home/your-user/portfolio-website',
-    instances: 2,  // Or 'max' to use all CPU cores
-    exec_mode: 'cluster',
-    env: {
-      NODE_ENV: 'production',
-      PORT: 3000
-    },
-    error_file: './logs/err.log',
-    out_file: './logs/out.log',
-    log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-    merge_logs: true,
-    max_memory_restart: '500M',
-    autorestart: true,
-    watch: false,
-    max_restarts: 10,
-    min_uptime: '10s'
-  }]
-};
-```
-
 ### PM2 Commands
 
 #### Starting Your App
 
 ```bash
-# Start with ecosystem config
-pm2 start ecosystem.config.js
-
-# Or start directly (simple)
-pm2 start server/index.js --name portfolio-api -i 2
-
-# Start in cluster mode with max CPU cores
-pm2 start server/index.js --name portfolio-api -i max
+pm2 start npm --name "ron-professional-site" -- start
 ```
 
 #### Managing Your App
@@ -752,41 +716,6 @@ cd server
 node scripts/unlock-admin.js your-username
 ```
 
----
-
-## 🚀 Deployment Checklist
-
-### Pre-Deployment
-
-- [ ] Update environment variables in `server/.env`
-- [ ] Generate strong JWT secret: `openssl rand -base64 32`
-- [ ] Set `NODE_ENV=production`
-- [ ] Configure CORS allowed origins
-- [ ] Review security settings
-
-### Build & Deploy
-
-- [ ] Pull latest code: `git pull origin main`
-- [ ] Install dependencies: `npm install && cd client && npm install && cd ../server && npm install`
-- [ ] Build frontend: `cd client && npm run build`
-- [ ] Test production build locally
-- [ ] Install PM2: `sudo npm install -g pm2`
-- [ ] Create `ecosystem.config.js`
-- [ ] Start with PM2: `pm2 start ecosystem.config.js`
-- [ ] Save PM2 configuration: `pm2 save`
-- [ ] Enable startup script: `pm2 startup`
-
-### Post-Deployment
-
-- [ ] Verify app is running: `pm2 list`
-- [ ] Check logs: `pm2 logs portfolio-api`
-- [ ] Test website in browser
-- [ ] Test admin panel login
-- [ ] Configure reverse proxy (Caddy/Nginx)
-- [ ] Enable SSL/HTTPS
-- [ ] Set up monitoring/alerts
-- [ ] Configure log rotation
-- [ ] Set up backup for database
 
 ---
 
@@ -827,22 +756,6 @@ Modify components in `client/src/components/`:
 - [Express.js Guide](https://expressjs.com/)
 - [PM2 Documentation](https://pm2.keymetrics.io/docs/)
 - [Vite Documentation](https://vitejs.dev/)
-
----
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create your feature branch: `git checkout -b feature/amazing-feature`
-3. Commit your changes: `git commit -m 'Add amazing feature'`
-4. Push to the branch: `git push origin feature/amazing-feature`
-5. Open a Pull Request
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
